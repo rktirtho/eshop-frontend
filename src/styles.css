@@ -1416,6 +1416,10 @@ a[class*=card]:hover .title {
   display: block;
 }
 
+a{ 
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=ui.css.map */
 
 
