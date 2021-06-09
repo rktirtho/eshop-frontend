@@ -13,10 +13,20 @@ import { BrandsComponent } from './components/brands/brands.component';
 import { DownloadAppsComponent } from './components/download-apps/download-apps.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
+import { HeaderMainComponent } from './components/header-main/header-main.component';
+import { HeaderTopComponent } from './components/header-top/header-top.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes=[
-  {path : "", redirectTo : "products", pathMatch: "full"},
-  {path : "**", redirectTo : "products", pathMatch: "full"}
+
+  {path: "cart", component: ShoppingCartComponent},
+  {path: "login", component: LoginComponent},
+  {path: "register", component: RegisterComponent},
+  {path: "", component: HomePageComponent},
+  {path : "**", redirectTo : "/", pathMatch: "full"}
 ]
 
 @NgModule({
@@ -31,7 +41,13 @@ const routes: Routes=[
     BrandsComponent,
     DownloadAppsComponent,
     IntroductionComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    HeaderMainComponent,
+    HeaderTopComponent,
+    LoginComponent,
+    RegisterComponent,
+    ShoppingCartComponent,
+    HomePageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
